@@ -10,7 +10,16 @@ body {
 
 #container {
   border: 1px solid red;
-  height: 712px;
   width: 360px;
-  margin: 0 auto;
+  margin: auto;  
+}
+
+#profile {
+  text-align: center;
+}
+
+#profile img {
+  display: block;
+  width: 112px;
+  margin: auto 0;
 }
