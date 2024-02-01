@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*medida atraves da borda*/
+}
+
 body {
   /* background-image: url(./assets/bg-mobile.jpg); 
   background-repeat: no-repeat;
@@ -8,18 +14,27 @@ body {
   background: url("./assets/bg-mobile.jpg") no-repeat top center/cover;
 }
 
+body * {
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+}
+
 #container {
-  border: 1px solid red;
   width: 360px;
-  margin: auto;  
+  margin: 56px auto 0px; /*Em cima - Nas laterais - em baixo*/
 }
 
 #profile {
   text-align: center;
+  padding: 24px;
 }
 
 #profile img {
-  display: block;
   width: 112px;
-  margin: auto 0;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px; /*Altura da linha*/
+  margin-top: 8px;
 }
