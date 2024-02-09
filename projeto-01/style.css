@@ -38,3 +38,40 @@ body * {
   line-height: 24px; /*Altura da linha*/
   margin-top: 8px;
 }
+
+/* links */
+ul {
+  list-style: none;    
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {  
+  border: 1px solid red;
+
+  display: flex;
+  align-items: center; /*Alinha com base no eixo X*/
+  justify-content: center; /*Alinha com base no eixo Y*/
+
+  padding: 16px 24px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /*Safari precisa desse parâmetro*/
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/*hover é um tipo de pseudo-selector*/
+ul li a:hover{
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid #FFFFFF;
+}
