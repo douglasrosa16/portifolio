@@ -22,6 +22,7 @@ body * {
 #container {
   width: 360px;
   margin: 56px auto 0px; /*Em cima - Nas laterais - em baixo*/
+  padding: 0 24px;
 }
 
 #profile {
@@ -68,10 +69,22 @@ ul li a {
   font-weight: 500;
 
   transition: background 0.2s;
+  padding: 24px 0;
 }
 
 /*hover é um tipo de pseudo-selector*/
 ul li a:hover{
   background-color: rgba(255, 255, 255, 0.05);
   border: 1.5px solid #FFFFFF;
+}
+
+/*Social links */
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  padding: 24px 0;
+  font-size: 24px;
+
 }
