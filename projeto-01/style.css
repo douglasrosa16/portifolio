@@ -83,7 +83,7 @@ body * {
   /*nesse caso o switch é pai dele e ele é o relativo, então o button respeita o switch*/
   position: absolute;
   z-index: 1;/*muda a posição do elemento, começa do zero e vários níveis como camadas*/
-  right: 0; /*máximo a direita*/
+  left: 0; /*máximo a esquerda*/
   transform: translateY(-50%); /*movimenta o elemento pra cima ou para baixo*/
   top: 50%; /*muda a posição do elemento vericalmente*/  
 }
