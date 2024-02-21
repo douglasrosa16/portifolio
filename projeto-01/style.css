@@ -33,6 +33,7 @@ body {
 
   /*background: color image repeat position/size -> Shorthand*/
   background:var(--bg-url) no-repeat top center/cover;
+  height: 100vh; /*100% do vertical vísivel*/
 }
 
 
@@ -42,7 +43,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px; /*Em cima - Nas laterais - em baixo*/
   padding: 0 24px;
 }
@@ -86,11 +88,16 @@ body * {
   left: 0; /*máximo a esquerda*/
   transform: translateY(-50%); /*movimenta o elemento pra cima ou para baixo*/
   top: 50%; /*muda a posição do elemento vericalmente*/  
+  animation: slide-out 0.3s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  /*Forma padrão de fazer*/
+  /* right: 0;
+  left: initial; */
+  
+  /*Com animação*/
+  animation: slide-in 0.4s forwards; /*forwards mantém as propriedades do fim da animação*/
 }
 
 #switch span {
@@ -167,6 +174,35 @@ ul li a:hover{
 footer {
   padding: 24px 0;
   text-align: center;
-  font-size: 14px;
-  
+  font-size: 14px;  
+}
+
+/*media queries*/
+@media (min-width: 700px){
+  :root {
+    --bg-url: url('./assets/bg-desktop.jpg');
+  }
+
+  .light {
+    --bg-url: url('./assets/bg-desktop-light.jpg')
+  }
+}
+
+/*Animações*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
